@@ -5,8 +5,8 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "silex/silex": "~1.1",
-        "silex/web-profiler": "~2.0",
+        "silex/silex": "~2.1",
+        "silex/web-profiler": "v2.0.5",
         "symfony/asset": "~2.8|3.0.*",
         "symfony/browser-kit": "~2.8|3.0.*",
         "symfony/class-loader": "~2.8|3.0.*",
@@ -21,12 +21,24 @@
         "symfony/security": "~2.8|3.0.*",
         "symfony/translation": "~2.8|3.0.*",
         "symfony/twig-bridge": "~2.8|3.0.*",
-        "symfony/validator": "~2.8|3.0.*"
+        "symfony/validator": "~2.8|3.0.*",
+        "doctrine/dbal": "~2.3",
+        "doctrine/orm": "~2.3",
+        "pimple/pimple" : ">=2.1,<4",
+        "dflydev/doctrine-orm-service-provider": "^2.0",
+        "symfony/yaml": "^3.2"
+
+    },  
+    "config": {
+            "bin-dir": "bin"
     },
     "autoload": {
         "psr-0": { "": "src/"},
         "psr-4": {
+            "App\\Repositories\\"   : "src/Repositories/",
+            "App\\Entities\\"       : "src/Entities/",
             "App\\Controllers\\"    : "src/Controllers/"
+            
         }
     },
     "scripts": {
@@ -34,5 +46,6 @@
             "echo 'Started web server on http://localhost:8888'",
             "php -S localhost:8888 -t web"
         ]
-    }
+    },
+    "minimum-stability": "dev"
 }

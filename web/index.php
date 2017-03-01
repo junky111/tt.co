@@ -12,13 +12,14 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
 
-require_once __DIR__.'/../vendor/autoload.php';
-
+$loader = require_once __DIR__.'/../vendor/autoload.php';
+\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
 Debug::enable();
 
 $app = require __DIR__.'/../src/app.php';
 require __DIR__.'/../config/dev.php';
 require __DIR__.'/../src/routes.php';
+require __DIR__.'/../src/registers.php';
 $app->run();
 
 

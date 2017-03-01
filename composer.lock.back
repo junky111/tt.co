@@ -1764,12 +1764,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "81560894d684c5020fcd6c974be34eab3dfa58f9"
+                "reference": "0fa27c3384267e8cf934b562d7aebf98f9495487"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/81560894d684c5020fcd6c974be34eab3dfa58f9",
-                "reference": "81560894d684c5020fcd6c974be34eab3dfa58f9",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/0fa27c3384267e8cf934b562d7aebf98f9495487",
+                "reference": "0fa27c3384267e8cf934b562d7aebf98f9495487",
                 "shasum": ""
             },
             "require": {
@@ -1841,7 +1841,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-28 14:44:39"
+            "time": "2017-02-28 14:21:44"
         },
         {
             "name": "symfony/inflector",
